@@ -1,0 +1,28 @@
+
+f = @(x) exp(x) - 2;
+
+a = 0; c = 2;
+e = 0.01;
+b = (a+c)/2;
+
+x = [b];
+
+while f(b) < 0.01
+   if f(a) * f(b) < 0
+       c = b;
+   end
+   
+   if f(b) *f(c) < 0
+    a = b;
+   end
+   b = (a+c)/2;
+   x = [x b];
+end
+
+xx = 0:0.01:2;
+yy = f(xx);
+
+plot(x, zeros(1, length(x)), 'o'
+
+
+

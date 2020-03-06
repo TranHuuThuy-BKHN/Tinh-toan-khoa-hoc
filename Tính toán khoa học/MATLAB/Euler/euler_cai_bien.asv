@@ -1,0 +1,12 @@
+f = @(y) - y^1.5 + 1;
+h = 0.1;
+t = 0:h:1;
+
+y = zeros(size(t));
+y(1) = 10;
+
+for i = 2:length(t)
+    yk = [y(i)];
+    yk1 = 
+    
+end

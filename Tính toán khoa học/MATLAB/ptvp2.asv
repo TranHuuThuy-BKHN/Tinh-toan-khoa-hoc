@@ -1,0 +1,4 @@
+fw = @(t,w, y) sin(t) * w - t * y - cos(t);
+
+
+h = input('')

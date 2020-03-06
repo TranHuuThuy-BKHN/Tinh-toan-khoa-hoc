@@ -1,0 +1,16 @@
+function v = harmonic_fit(x, y, k, u)
+    v = zeros(1, length(u));
+    A = zeros(k, k);
+    n = length(x);
+    b = zeros(1, k);
+    for l = 1:k
+        for j = 1:k
+           A(l,j) = sin(2*pi*j*x/k) .* sin(2*pi*l*x/k); 
+        end
+        b(l) = y .* sin(2*pi*l*x/k);
+    end
+    
+    coeff = (A\b')';
+    f = @(x) si
+    
+end

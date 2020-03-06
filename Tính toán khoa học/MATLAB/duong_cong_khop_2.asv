@@ -1,0 +1,7 @@
+function [v, coefs] = duong_cong_khop_2(x, y, k, u)
+    b = zeros(k,1);
+    for i = 1:k
+        b(i) = sum(y *
+    end
+
+end

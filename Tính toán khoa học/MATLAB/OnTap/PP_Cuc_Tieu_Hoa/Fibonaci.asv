@@ -1,0 +1,5 @@
+N = 100;
+fib = zeros(1, N);
+fib(1) = 0;
+fib(2) = 1;
+for i = 3:N; fib(i) = fib(i-1) + fib(i-2);end

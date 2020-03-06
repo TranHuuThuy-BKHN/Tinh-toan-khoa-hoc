@@ -1,0 +1,7 @@
+f = @(x) x .* x - 4*sin(x);
+x0 = 3;
+h = 0.001;
+
+while abs(f(x0)) > h
+    
+end

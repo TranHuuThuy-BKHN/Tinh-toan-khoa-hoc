@@ -1,0 +1,9 @@
+function v = noi_suy_lagrange(x, y, u)
+    n = length(u);
+    v = zeros(size(u));
+    for i = 1:n
+        for j = 1:length(x)
+            v(i) = v(i) + prod(u(i) - x(x ~= x(j))) / 
+        end
+    end
+end

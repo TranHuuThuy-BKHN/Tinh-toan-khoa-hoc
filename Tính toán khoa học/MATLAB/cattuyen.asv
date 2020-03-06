@@ -1,0 +1,15 @@
+f = @(x) exp( .*  - 4*sin(x);
+x0 = 3;
+h = 0.001;
+x = [];
+
+while abs(f(x0)) > h
+    x = [x x0];
+    dfx = (f(x0 + h) - f(x0 - h)) / (2*h);
+    x0 = x0 - f(x0)/dfx;
+end
+x
+y = f(x);
+xx = 0.5:0.01:3.5;
+yy = f(xx);
+plot(x,y,'ro', xx, yy);

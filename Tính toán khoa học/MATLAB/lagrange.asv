@@ -1,0 +1,15 @@
+function p = lagrange(X, Y, x)
+
+    n = length(x);
+    p = zeros(1, n);
+    N = length(X);
+    
+    for i = 1 : n
+        
+        for j = 1:N
+            tu = prod(x(i) - X) / (x(i) - X(j));
+            mau = prod(X(j) - X) / (X(j) - 
+            p(i) = p(i) + prod(x(i) - X) / (x(i) - X(j)) /   
+        end 
+    end
+end

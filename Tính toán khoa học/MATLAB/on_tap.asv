@@ -1,0 +1,23 @@
+f = @(x) x.^3 - x + 1;
+e = 0.01;
+h = 1e-5;
+x = -1;
+
+while abs(f(x)) > e
+    df = (f(x+h) - f(x-h)) / 2 / h;
+    x = x - f(x)/df;
+end
+
+xx = -10:0.01:10;
+yy = f(xx);
+plot(xx, yy, x, f(x), 'o');
+
+f = @(x) exp(-x/2) .* sin(3*x);
+x1 = input('x1 = ');
+x2 = input('x2 = ');
+
+while abs(f(x1)) > e
+    df = (f(x+h) - f(x-h)) / 2 / h;
+    x = x - f(x)/df;
+end
+

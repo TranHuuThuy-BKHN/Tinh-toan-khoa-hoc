@@ -1,0 +1,18 @@
+function L, U, p = lutx2(A, b)
+    p = 1:n ;
+    
+    for i = 1:n-1
+        [v, iRow] = max(abs(A(i:n, i)));
+        iRow = i + iRow - 1;
+        A([i, iRow], :) = A([iRow, i], :);
+        p([i, iRow]) = p([iRow, i]);
+        
+        for j = i+1:n
+            A(j, :) = A(j, :) - A(j, i) / A(i,i) * A(i, :);
+        end
+
+    end
+    U = A;
+    L = [];
+    
+end

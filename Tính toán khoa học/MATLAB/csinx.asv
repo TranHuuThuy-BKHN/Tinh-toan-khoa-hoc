@@ -1,0 +1,8 @@
+function v = csinx(x, y, m, v)
+    n = length(x);
+    
+    for j = 1:m
+        b = sum(y .* sin(j * x));
+        
+    end
+end

@@ -1,0 +1,8 @@
+f = @(x) 0.3 + 20 * x - 140 * x .^ 2 + 730 * x .^ 3 - 810 * x .^ 4 + 200 * x .^ 5;
+
+function I = tichphan(f, a, b, n)
+    h = (a-b)/n;
+    X = [a:h:b];
+    Y = f(X);
+    Y
+end

@@ -1,0 +1,11 @@
+function [v, a] = noisuyLagrange(x, y, u)
+    n = length(x) - 1;
+    A = [];
+    for i = 1:n+1
+        A = [A; x(i).^[0:n]];
+    end
+    a = (A\y)';
+    a = a(n+1:-1:1);
+    
+    v = u .^ [0:n] 
+end

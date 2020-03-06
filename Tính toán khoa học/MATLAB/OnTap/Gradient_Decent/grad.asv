@@ -1,0 +1,19 @@
+x = -5:5;
+y = x.^3 - 3*x + 1 + 30*rand(size(x));
+k = 3;
+n = l
+e = 0.01;
+lr = 0.1;
+a = zeros(1, k+1);
+GD = ones(1,k+1);
+error = 1;
+
+while error > e
+    fx = polyval(a, x)';
+    for i = 1:k+1
+        GD(i) = mean(x.^(k+1-i) * fx - x.^(k+1-i) * y');
+    end
+    a = a - lr*GD;
+    error = 0.5/length(x)*sum((polyval(a, x) - y) .^2);
+    disp(GD);
+end
